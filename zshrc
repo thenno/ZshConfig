@@ -15,7 +15,7 @@ if [[ $TERM == "dumb" ]]
 then
 	set $ZSH_THEME = "thenno_clean"
 fi
-if [[ $TERM == "xterm" ]]
+if [[ $TERM == "xterm" || $TERM == "screen" ]]
 then
 	export TERM="xterm-256color"
 fi

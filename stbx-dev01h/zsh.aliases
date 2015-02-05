@@ -1,0 +1,7 @@
+alias py='ipython'
+
+alias getdict='mr yt dict-get UrlToGroups.yaml IgnoredUA.yaml IPREG.st.xml'
+alias mr='rac'
+
+alias vi="emacs --no-site-file"
+alias emacs="emacs --no-site-file"
