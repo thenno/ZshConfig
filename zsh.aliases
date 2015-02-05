@@ -1,0 +1,18 @@
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+
+alias ls='ls --color=auto'
+alias ll='ls -ohG'
+alias la='ls -oAhG'
+alias l='ls -CFG'
+
+alias gs="git status ."
+alias gc="git commit -m"
+alias gl="git log ."
+alias ga="git add"
+alias gp="git pull && git push"
+
+alias ta='tmux attach'
+
+alias em='emacs -nw'
