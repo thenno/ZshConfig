@@ -10,11 +10,8 @@ autoload -U compinit
 compinit
 setopt CORRECT_ALL
 
-ZSH_THEME="thenno"
-if [[ $TERM == "dumb" ]]
-then
-	set $ZSH_THEME = "thenno_clean"
-fi
+ZSH_THEME="ys"
+
 if [[ $TERM == "xterm" || $TERM == "screen" ]]
 then
 	export TERM="xterm-256color"
@@ -31,8 +28,6 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 source $ZDOTDIR/zsh.aliases
 
-export LANG=en_US.UTF-8
-
 if [ ! -d "$HOME/bin" ] ; then
     mkdir -p $HOME/bin
 fi
@@ -48,3 +43,5 @@ if [ -d $CONFIGHOST ] ; then
 	[ -f $CONFIGHOST/zshrc ] && source $HOME/.zsh.d/`hostname`/zshrc
 	[ -f $CONFIGHOST/zsh.aliases ] && source $HOME/.zsh.d/`hostname`/zsh.aliases
 fi
+
+export LANG=en_US.UTF-8
