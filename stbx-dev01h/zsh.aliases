@@ -1,5 +1,3 @@
-alias py='ipython'
-
 alias getdict='mr yt dict-get UrlToGroups.yaml IgnoredUA.yaml IPREG.st.xml'
 alias mr='rac'
 
