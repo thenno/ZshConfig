@@ -3,6 +3,8 @@ ZDOTDIR=$HOME/.zsh.d
 ZSH=$ZDOTDIR/oh-my-zsh
 ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
+PYTHONPATH="./.pip:$PYTHONPATH"
+
 HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
 
@@ -31,6 +33,10 @@ source $ZDOTDIR/zsh.aliases
 if [ ! -d "$HOME/bin" ] ; then
     mkdir -p $HOME/bin
 fi
+if [ ! -d "$HOME/.pip" ] ; then
+    mkdir -p $HOME/.pip
+fi
+
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/bin
 
 if [ -d "$HOME/.virtualenvs" ] ; then
