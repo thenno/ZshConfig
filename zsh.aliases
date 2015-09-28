@@ -11,7 +11,8 @@ alias gs="git status ."
 alias gc="git commit -m"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges --perl-regexp --author='^((?!Stattester).*)$'"
 alias ga="git add"
-alias gp="git pull && git push"
+alias gp="git pull --rebase && git push"
+alias gch="git checkout"
 
 alias ta='tmux attach'
 
