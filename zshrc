@@ -51,3 +51,5 @@ if [ -d $CONFIGHOST ] ; then
 fi
 
 export LANG=en_US.UTF-8
+export WORKON_HOME=~/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
