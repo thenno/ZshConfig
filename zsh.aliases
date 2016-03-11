@@ -13,6 +13,7 @@ alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgree
 alias ga="git add"
 alias gp="git pull --rebase && git push"
 alias gch="git checkout"
+alias gr="git rebase"
 
 alias ta='tmux attach'
 
