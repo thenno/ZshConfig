@@ -53,3 +53,6 @@ fi
 export LANG=en_US.UTF-8
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
+
+alias grep="/bin/grep $GREP_OPTIONS"
+unset GREP_OPTIONS
