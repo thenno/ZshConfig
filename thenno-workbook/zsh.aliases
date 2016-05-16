@@ -3,3 +3,8 @@ alias serv1h="ssh thenno@stbx-dev01h.stat.yandex.net"
 
 alias pn='ipython notebook --pylab=inline'
 alias py='ipython2'
+
+if [ $VIRTUAL_ENV ]; then
+	alias pip='/usr/local/bin/pip2'
+	alias pip3='/usr/local/bin/pip'
+fi
