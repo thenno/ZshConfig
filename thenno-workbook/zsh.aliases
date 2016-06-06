@@ -1,5 +1,6 @@
 alias serv1e="ssh thenno@stbx-dev01e.yandex.ru"
 alias serv1h="ssh thenno@stbx-dev01h.stat.yandex.net"
+alias serv2e="dev02e.stat.yandex-team.ru"
 
 alias pn='ipython notebook --pylab=inline'
 alias py='ipython2'
