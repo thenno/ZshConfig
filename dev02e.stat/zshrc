@@ -1,0 +1,3 @@
+export CDPATH=$CDPATH:~/repos
+. ~/repos/core-statbox/bashrc-devel
+export NLS_DATE_FORMAT="DD-MON-YYYY HH24:MI:SS"
