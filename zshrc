@@ -37,7 +37,7 @@ if [ ! -d "$HOME/.pip" ] ; then
     mkdir -p $HOME/.pip
 fi
 
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/bin
+export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.local/bin:~/bin
 
 if [ -d "$HOME/.virtualenvs" ] ; then
 	export WORKON_HOME=$HOME/.virtualenvs
@@ -56,3 +56,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 alias grep="/bin/grep $GREP_OPTIONS"
 unset GREP_OPTIONS
+
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+eval "$(stack --bash-completion-script stack)"
