@@ -1,0 +1,9 @@
+export CDPATH=$CDPATH:~/Program/work:~/Program/pet_projects
+source ~/Program/work/core/bashrc-devel
+export NLS_DATE_FORMAT="DD-MON-YYYY HH24:MI:SS"
+
+# for urjm
+export RJM_REPOS_PATH="/home/thenno/Program/work/rjm-jobs"
+export RJM_YT_TOKEN="whaaaaaaat?"
+export RJM_PATH_PREFIX="//statbox/home/thenno/urjm"
+export RJM_YT_POOL="thenno"

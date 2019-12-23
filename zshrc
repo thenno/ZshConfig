@@ -54,8 +54,14 @@ export LANG=en_US.UTF-8
 export WORKON_HOME=~/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
-alias grep="/bin/grep $GREP_OPTIONS"
+alias grep="grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
+
+export REQUESTS_CA_BUNDLE=/Users/thenno/.certs/ca-certificates.crt
+
+eval $(thefuck --alias)
+
+source /Users/thenno/.yql/shell_completion
