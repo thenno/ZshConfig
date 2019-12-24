@@ -16,10 +16,17 @@ local current_dir='${PWD/#$HOME/~}'
 
 # Git info.
 local git_info='$(git_prompt_info)'
+local arc_info='$(arc_prompt_info)'
 ZSH_THEME_GIT_PROMPT_PREFIX=" %{$fg[white]%}on%{$reset_color%} git:%{$fg[cyan]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 ZSH_THEME_GIT_PROMPT_DIRTY=" %{$fg[red]%}x"
 ZSH_THEME_GIT_PROMPT_CLEAN=" %{$fg[green]%}o"
+
+ZSH_THEME_ARC_PROMPT_PREFIX="%{$fg[white]%}on%{$reset_color%} arc:%{$fg[cyan]%}"
+ZSH_THEME_ARC_PROMPT_SUFFIX="%{$reset_color%}"
+ZSH_THEME_ARC_PROMPT_DIRTY=" %{$fg[red]%}x"
+ZSH_THEME_ARC_PROMPT_CLEAN=" %{$fg[green]%}o"
+
 
 # Prompt format: \n # USER at MACHINE in DIRECTORY on git:BRANCH STATE [TIME] \n $ 
 PROMPT="
@@ -30,6 +37,7 @@ PROMPT="
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${git_info} \
+${arc_info} \
 %{$fg[white]%}[%*]
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 
@@ -42,6 +50,7 @@ PROMPT="
 %{$fg[white]%}in \
 %{$terminfo[bold]$fg[yellow]%}${current_dir}%{$reset_color%}\
 ${git_info} \
+${arc_info} \
 %{$fg[white]%}[%*]
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
 fi

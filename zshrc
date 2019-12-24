@@ -65,3 +65,4 @@ export REQUESTS_CA_BUNDLE=/Users/thenno/.certs/ca-certificates.crt
 eval $(thefuck --alias)
 
 source /Users/thenno/.yql/shell_completion
+source $HOME/.ya.completion/zsh/arc
