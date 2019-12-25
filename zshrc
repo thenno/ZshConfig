@@ -44,6 +44,9 @@ if [ -d "$HOME/.virtualenvs" ] ; then
 	source /usr/local/bin/virtualenvwrapper.sh
 fi
 
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
+
 CONFIGHOST="$HOME/.zsh.d/`hostname`"
 if [ -d $CONFIGHOST ] ; then
 	[ -f $CONFIGHOST/zshrc ] && source $HOME/.zsh.d/`hostname`/zshrc
@@ -56,9 +59,6 @@ source /usr/local/bin/virtualenvwrapper.sh
 
 alias grep="grep $GREP_OPTIONS"
 unset GREP_OPTIONS
-
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
 
 export REQUESTS_CA_BUNDLE=/Users/thenno/.certs/ca-certificates.crt
 
