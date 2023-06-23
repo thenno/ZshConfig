@@ -1,0 +1,25 @@
+alias serv1e="ssh thenno@stbx-dev01e.yandex.ru"
+alias serv1h="ssh thenno@stbx-dev01h.stat.yandex.net"
+alias serv2e="ssh dev02e.stat.yandex-team.ru"
+alias ya="/Users/thenno/Programs/work/arc/arcadia/ya"
+
+alias pn='ipython notebook --pylab=inline'
+alias py='ipython'
+alias cdp='cd /Users/thenno/Programs/work/arc/arcadia/yweb/yasap/pdb'
+alias cdd='cd /Users/thenno/Programs/work/arc/arcadia/datalens'
+
+alias as="arc status"
+alias ad="arc diff"
+alias ac="arc commit -m"
+alias al="arc log"
+alias aa="arc add"
+alias ap="arc pull"
+alias ach="arc checkout"
+alias ar="arc rebase"
+
+alias dcpm="source /Users/thenno/Programs/work/ui-bi-controlplane/dcpm_activate.sh"
+
+if [ $VIRTUAL_ENV ]; then
+	alias pip='/usr/local/bin/pip2'
+	alias pip3='/usr/local/bin/pip'
+fi
