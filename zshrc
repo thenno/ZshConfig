@@ -1,15 +1,21 @@
 # Path to your oh-my-zsh configuration.
 ZDOTDIR=$HOME/.zsh.d
 
-DISABLE_AUTO_UPDATE="true"
-ZSH=$ZDOTDIR/ohmyzsh
-
-ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
-
 PYTHONPATH="./.pip:$PYTHONPATH"
 
 HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
+ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
+
+CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
+if [ -d $CONFIGHOST ] ; then
+	[ -f $CONFIGHOST/zshrc ] && source $CONFIGHOST/zshrc
+	[ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
+fi
+
+DISABLE_AUTO_UPDATE="true"
+ZSH=$ZDOTDIR/ohmyzsh
+
 
 # Set ZSH_CUSTOM to the path where your custom config files
 # and plugins exists, or else we will use the default custom/
@@ -33,12 +39,6 @@ if [ ! -d "$HOME/bin" ] ; then
 fi
 if [ ! -d "$HOME/.pip" ] ; then
     mkdir -p $HOME/.pip
-fi
-
-CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
-if [ -d $CONFIGHOST ] ; then
-	[ -f $CONFIGHOST/zshrc ] && source $CONFIGHOST/zshrc
-	[ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
 fi
 
 export LANG=en_US.UTF-8
