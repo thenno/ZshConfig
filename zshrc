@@ -14,8 +14,6 @@ if [[ -z "$ZSH_CUSTOM" ]]; then
     ZSH_CUSTOM="$ZDOTDIR/custom"
 fi
 
-autoload -U compinit
-compinit
 setopt CORRECT_ALL
 
 ZSH_THEME="ys-thenno"
