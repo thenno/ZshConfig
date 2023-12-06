@@ -1,6 +1,3 @@
-alias serv1e="ssh thenno@stbx-dev01e.yandex.ru"
-alias serv1h="ssh thenno@stbx-dev01h.stat.yandex.net"
-alias serv2e="ssh dev02e.stat.yandex-team.ru"
 alias ya="/Users/thenno/Program/work/arc/arcadia/ya"
 
 alias pn='ipython notebook --pylab=inline'
