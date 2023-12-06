@@ -17,3 +17,5 @@ if [ $VIRTUAL_ENV ]; then
 	alias pip='/usr/local/bin/pip2'
 	alias pip3='/usr/local/bin/pip'
 fi
+
+alias cdd='cd /Users/thenno/Programs/work/datalens-backend-private'
