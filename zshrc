@@ -16,7 +16,13 @@ ZSH_THEME="ys"
 
 export LSCOLORS="Dxfxcxdxcxegedabagacad"
 
-plugins=(git)
+# Set ZSH_CUSTOM to the path where your custom config files
+# and plugins exists, or else we will use the default custom/
+if [[ -z "$ZSH_CUSTOM" ]]; then
+    ZSH_CUSTOM="$ZDOTDIR/custom"
+fi
+
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 source $ZDOTDIR/zsh.aliases
@@ -27,9 +33,6 @@ fi
 if [ ! -d "$HOME/.pip" ] ; then
     mkdir -p $HOME/.pip
 fi
-
-autoload -U +X compinit && compinit
-autoload -U +X bashcompinit && bashcompinit
 
 CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
 if [ -d $CONFIGHOST ] ; then
@@ -47,8 +50,5 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
 
-# Set ZSH_CUSTOM to the path where your custom config files
-# and plugins exists, or else we will use the default custom/
-if [[ -z "$ZSH_CUSTOM" ]]; then
-    ZSH_CUSTOM="$ZDOTDIR/custom"
-fi
+autoload -U +X compinit && compinit
+autoload -U +X bashcompinit && bashcompinit
