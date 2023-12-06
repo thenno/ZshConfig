@@ -1,8 +1,8 @@
 export CDPATH=$CDPATH:~/Program/work:~/Program/pet_projects
 export NLS_DATE_FORMAT="DD-MON-YYYY HH24:MI:SS"
 
-# source /Users/thenno/.yql/shell_completion
-source /Users/thenno/.ya.completion/zsh/arc
-
 export PATH="/opt/homebrew/bin:$PATH"
 export HOMEBREW_NO_EMOJI=True
+
+# Added by OrbStack: command-line tools and integration
+source ~/.orbstack/shell/init.zsh 2>/dev/null || :
