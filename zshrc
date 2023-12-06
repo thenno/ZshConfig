@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh configuration.
 ZDOTDIR=$HOME/.zsh.d
+
+DISABLE_AUTO_UPDATE="true"
 ZSH=$ZDOTDIR/ohmyzsh
+
 ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 PYTHONPATH="./.pip:$PYTHONPATH"
