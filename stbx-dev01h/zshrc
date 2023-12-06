@@ -1,2 +1,0 @@
-export CDPATH=$CDPATH:~/repos
-. ~/repos/core-statbox/bashrc-devel

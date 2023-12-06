@@ -14,11 +14,6 @@ setopt CORRECT_ALL
 
 ZSH_THEME="ys"
 
-if [[ $TERM == "xterm" || $TERM == "screen" ]]
-then
-	export TERM="xterm-256color"
-fi
-
 export HOMEBREW_NO_EMOJI=True
 export LSCOLORS="Dxfxcxdxcxegedabagacad"
 
@@ -37,13 +32,6 @@ if [ ! -d "$HOME/.pip" ] ; then
     mkdir -p $HOME/.pip
 fi
 
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:~/.local/bin:~/bin
-
-if [ -d "$HOME/.virtualenvs" ] ; then
-	export WORKON_HOME=$HOME/.virtualenvs
-	source /usr/local/bin/virtualenvwrapper.sh
-fi
-
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
@@ -54,12 +42,13 @@ if [ -d $CONFIGHOST ] ; then
 fi
 
 export LANG=en_US.UTF-8
-export WORKON_HOME=~/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
 
 alias grep="grep $GREP_OPTIONS"
 unset GREP_OPTIONS
 
-export REQUESTS_CA_BUNDLE=/Users/thenno/.certs/ca-certificates.crt
+export PATH="/opt/homebrew/bin:$PATH"
 
-eval $(thefuck --alias)
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
