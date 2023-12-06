@@ -28,11 +28,9 @@ virtenv_prompt() {
 	echo "${YS_THEME_VIRTUALENV_PROMPT_PREFIX}${VIRTUAL_ENV:t}${YS_THEME_VIRTUALENV_PROMPT_SUFFIX}"
 }
 
-local exit_code="%(?,,C:%{$fg[red]%}%?%{$reset_color%})"
-
 # Prompt format:
 #
-# PRIVILEGES USER @ MACHINE in DIRECTORY on git:BRANCH STATE [TIME] C:LAST_EXIT_CODE
+# PRIVILEGES USER @ MACHINE in DIRECTORY on git:BRANCH STATE [TIME]
 # $ COMMAND
 #
 # For example:
@@ -49,5 +47,5 @@ PROMPT="
 ${git_info}\
 ${venv_info}\
  \
-[%*] $exit_code
+[%*]
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
