@@ -6,3 +6,14 @@ export HOMEBREW_NO_EMOJI=True
 
 # Added by OrbStack: command-line tools and integration
 source ~/.orbstack/shell/init.zsh 2>/dev/null || :
+
+# The next line updates PATH for Yandex Cloud CLI.
+if [ -f '/Users/thenno/yandex-cloud/path.bash.inc' ]; then source '/Users/thenno/yandex-cloud/path.bash.inc'; fi
+
+# The next line enables shell command completion for yc.
+if [ -f '/Users/thenno/yandex-cloud/completion.zsh.inc' ]; then source '/Users/thenno/yandex-cloud/completion.zsh.inc'; fi
+
+# The next line updates PATH for Yandex Cloud Private CLI.
+if [ -f '/Users/thenno/ycp/path.bash.inc' ]; then source '/Users/thenno/ycp/path.bash.inc'; fi
+
+source /Users/thenno/yandex-cloud/completion.zsh.inc
