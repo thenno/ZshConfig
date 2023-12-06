@@ -8,19 +8,19 @@ PYTHONPATH="./.pip:$PYTHONPATH"
 HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
 
-autoload -U compinit
-compinit
-setopt CORRECT_ALL
-
-ZSH_THEME="ys"
-
-export LSCOLORS="Dxfxcxdxcxegedabagacad"
-
 # Set ZSH_CUSTOM to the path where your custom config files
 # and plugins exists, or else we will use the default custom/
 if [[ -z "$ZSH_CUSTOM" ]]; then
     ZSH_CUSTOM="$ZDOTDIR/custom"
 fi
+
+autoload -U compinit
+compinit
+setopt CORRECT_ALL
+
+ZSH_THEME="ys-thenno"
+
+export LSCOLORS="Dxfxcxdxcxegedabagacad"
 
 plugins=(git zsh-autosuggestions)
 
