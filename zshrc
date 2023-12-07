@@ -16,7 +16,6 @@ fi
 DISABLE_AUTO_UPDATE="true"
 ZSH=$ZDOTDIR/ohmyzsh
 
-
 # Set ZSH_CUSTOM to the path where your custom config files
 # and plugins exists, or else we will use the default custom/
 if [[ -z "$ZSH_CUSTOM" ]]; then
@@ -37,6 +36,8 @@ source $ZDOTDIR/zsh.aliases
 if [ ! -d "$HOME/bin" ] ; then
     mkdir -p $HOME/bin
 fi
+export PATH=$PATH:$HOME/bin
+
 if [ ! -d "$HOME/.pip" ] ; then
     mkdir -p $HOME/.pip
 fi
