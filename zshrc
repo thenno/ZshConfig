@@ -7,11 +7,6 @@ HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
 ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
-CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
-if [ -d $CONFIGHOST ] ; then
-	[ -f $CONFIGHOST/zshrc ] && source $CONFIGHOST/zshrc
-	[ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
-fi
 
 DISABLE_AUTO_UPDATE="true"
 ZSH=$ZDOTDIR/ohmyzsh
@@ -44,8 +39,11 @@ fi
 
 export LANG=en_US.UTF-8
 
-alias grep="grep $GREP_OPTIONS"
-unset GREP_OPTIONS
+CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
+if [ -d $CONFIGHOST ] ; then
+	[ -f $CONFIGHOST/zshrc ] && source $CONFIGHOST/zshrc
+	[ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
+fi
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
