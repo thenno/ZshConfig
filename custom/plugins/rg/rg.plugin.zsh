@@ -1,6 +1,6 @@
 rg() {
   if [ -z "$@" ]; then
-    echo "Usage: mygrep <pattern>"
+    echo "Usage: rg <pattern>"
     return 1
   fi
 

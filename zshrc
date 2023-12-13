@@ -7,7 +7,6 @@ HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
 ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
-
 DISABLE_AUTO_UPDATE="true"
 ZSH=$ZDOTDIR/ohmyzsh
 
