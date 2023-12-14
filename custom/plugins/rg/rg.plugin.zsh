@@ -4,5 +4,5 @@ rg() {
     return 1
   fi
 
-  grep -R $@ .
+  \grep --color=auto -R $@ .
 }
