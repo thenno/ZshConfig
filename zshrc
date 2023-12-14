@@ -22,7 +22,7 @@ ZSH_THEME="ys-thenno"
 
 export LSCOLORS="Dxfxcxdxcxegedabagacad"
 
-plugins=(git zsh-autosuggestions rg)
+plugins=(zsh-autosuggestions rg)
 
 source $ZSH/oh-my-zsh.sh
 source $ZDOTDIR/zsh.aliases
