@@ -19,8 +19,5 @@ alias gb="git branch"
 
 alias ta='tmux attach'
 
-alias em='emacs -nw --no-site-file'
-alias emacs="emacs --no-site-file"
-
 alias py3='ipython3'
 alias py='ipython'

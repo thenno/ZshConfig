@@ -1,23 +1,29 @@
 # Path to your oh-my-zsh configuration.
-ZDOTDIR=$HOME/.zsh.d
+load_plugin() {
+  local base_path=$1
+  local plugin="$2"
 
-PYTHONPATH="./.pip:$PYTHONPATH"
+  local plugin_directory="$base_path/$plugin"
+
+  if [[ -d "$plugin_directory" && -f "$plugin_directory/$plugin.plugin.zsh" ]]; then
+    source "$plugin_directory/$plugin.plugin.zsh"
+  else
+    echo "Error: Invalid or missing plugin directory for $plugin: $plugin_directory"
+  fi
+}
+
+
+ZDOTDIR=$HOME/.zsh.d
 
 HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
-ZSH_COMPDUMP="${ZDOTDIR:-${HOME}}/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
-DISABLE_AUTO_UPDATE="true"
-ZSH=$ZDOTDIR/ohmyzsh
-
-# Set ZSH_CUSTOM to the path where your custom config files
-# and plugins exists, or else we will use the default custom/
-if [[ -z "$ZSH_CUSTOM" ]]; then
-    ZSH_CUSTOM="$ZDOTDIR/custom"
-fi
+export ZSH_CACHE_DIR=$ZDOTDIR/cache
+export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 setopt CORRECT_ALL
 
+<<<<<<< HEAD
 ZSH_THEME="ys-thenno"
 
 export LSCOLORS="Dxfxcxdxcxegedabagacad"
@@ -36,15 +42,31 @@ if [ ! -d "$HOME/.pip" ] ; then
     mkdir -p $HOME/.pip
 fi
 
+=======
+>>>>>>> a3625a6 (First step)
 export LANG=en_US.UTF-8
+
+ZSH_PLUGINS="$ZDOTDIR/plugins"
+ZSH_THEME="ys-thenno"
+plugins=(zsh-autosuggestions rg)
+
+source "$ZDOTDIR/themes/$ZSH_THEME.zsh-theme"
+
+for plugin ($plugins); do
+  load_plugin $ZSH_PLUGINS $plugin
+done
+unset plugin
+
+if [ -d "$HOME/bin" ] ; then
+  export PATH=$PATH:$HOME/bin
+fi
+
+
+source $ZDOTDIR/zsh.aliases
 
 CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
 if [ -d $CONFIGHOST ] ; then
-	[ -f $CONFIGHOST/zshrc ] && source $CONFIGHOST/zshrc
-	[ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
+  [ -f $CONFIGHOST/zshrc ] && source $CONFIGHOST/zshrc
+  [ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
 fi
-
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+unset CONFIGHOST

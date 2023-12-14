@@ -1,3 +1,5 @@
+#autoload
+
 rg() {
   if [ -z "$@" ]; then
     echo "Usage: rg <pattern>"
