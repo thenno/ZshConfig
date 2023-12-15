@@ -1,18 +1,3 @@
-# Path to your oh-my-zsh configuration.
-load_plugin() {
-  local base_path=$1
-  local plugin="$2"
-
-  local plugin_directory="$base_path/$plugin"
-
-  if [[ -d "$plugin_directory" && -f "$plugin_directory/$plugin.plugin.zsh" ]]; then
-    source "$plugin_directory/$plugin.plugin.zsh"
-  else
-    echo "Error: Invalid or missing plugin directory for $plugin: $plugin_directory"
-  fi
-}
-
-
 ZDOTDIR=$HOME/.zsh.d
 
 HISTCONTROL=ignoreboth:erasedups
@@ -22,6 +7,8 @@ export ZSH_CACHE_DIR=$ZDOTDIR/cache
 export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 setopt CORRECT_ALL
+setopt auto_cd
+
 
 <<<<<<< HEAD
 ZSH_THEME="ys-thenno"
@@ -47,15 +34,18 @@ fi
 export LANG=en_US.UTF-8
 
 for lib_file ("$ZDOTDIR"/lib/*.zsh); do
-  source "$ZDOTDIR"/lib/*.zsh
+  source $lib_file
 done
 unset lib_file
 
-ZSH_PLUGINS="$ZDOTDIR/plugins"
 ZSH_THEME="ys-thenno"
-plugins=(zsh-autosuggestions rg)
-
+autoload -U colors && colors
+setopt prompt_subst
+export LSCOLORS="Gxfxcxdxbxegedabagacad"
 source "$ZDOTDIR/themes/$ZSH_THEME.zsh-theme"
+
+ZSH_PLUGINS="$ZDOTDIR/plugins"
+plugins=(zsh-autosuggestions rg)
 
 for plugin ($plugins); do
   load_plugin $ZSH_PLUGINS $plugin
@@ -66,7 +56,6 @@ if [ -d "$HOME/bin" ] ; then
   export PATH=$PATH:$HOME/bin
 fi
 
-
 source $ZDOTDIR/zsh.aliases
 
 CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
@@ -75,3 +64,7 @@ if [ -d $CONFIGHOST ] ; then
   [ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
 fi
 unset CONFIGHOST
+
+autoload -Uz compinit
+compinit
+zstyle ':completion:*' menu select

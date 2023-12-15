@@ -6,5 +6,5 @@ rg() {
     return 1
   fi
 
-  \grep --color=auto -R $@ .
+  grep -G --color=auto -R --exclude-dir={.git,.idea,.tox,.venv,.tools_venv} $@ .
 }
