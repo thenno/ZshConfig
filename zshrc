@@ -46,6 +46,11 @@ fi
 >>>>>>> a3625a6 (First step)
 export LANG=en_US.UTF-8
 
+for lib_file ("$ZDOTDIR"/lib/*.zsh); do
+  source "$ZDOTDIR"/lib/*.zsh
+done
+unset lib_file
+
 ZSH_PLUGINS="$ZDOTDIR/plugins"
 ZSH_THEME="ys-thenno"
 plugins=(zsh-autosuggestions rg)
