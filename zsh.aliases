@@ -15,6 +15,7 @@ alias gp="git pull --rebase && git push"
 alias gch="git checkout"
 alias gr="git rebase"
 alias gd="git diff"
+alias gb="git branch"
 
 alias ta='tmux attach'
 
