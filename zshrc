@@ -4,7 +4,6 @@ HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
 
 export ZSH_CACHE_DIR=$ZDOTDIR/cache
-export ZSH_COMPDUMP="$ZSH_CACHE_DIR/.zcompdump-${SHORT_HOST}-${ZSH_VERSION}"
 
 setopt CORRECT_ALL
 setopt auto_cd
@@ -65,6 +64,4 @@ if [ -d $CONFIGHOST ] ; then
 fi
 unset CONFIGHOST
 
-zstyle ':completion:*' menu select
-autoload -Uz compinit
 compinit -d $ZSH_COMPDUMP
