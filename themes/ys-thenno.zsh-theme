@@ -1,9 +1,4 @@
-# Clean, simple, compatible and meaningful.
-# Tested on Linux, Unix and Windows under ANSI colors.
-# It is recommended to use with a dark background.
-# Colors: black, red, green, yellow, *blue, magenta, cyan, and white.
-#
-# Mar 2013 Yad Smood
+# Based on yc.theme Yad Smood from ohmyzsh package
 
 # VCS
 YS_VCS_PROMPT_PREFIX1=" %{$reset_color%}on%{$fg[blue]%} "
@@ -28,15 +23,6 @@ virtenv_prompt() {
 	echo "${YS_THEME_VIRTUALENV_PROMPT_PREFIX}${VIRTUAL_ENV:t}${YS_THEME_VIRTUALENV_PROMPT_SUFFIX}"
 }
 
-# Prompt format:
-#
-# PRIVILEGES USER @ MACHINE in DIRECTORY on git:BRANCH STATE [TIME]
-# $ COMMAND
-#
-# For example:
-#
-# % ys @ ys-mbp in ~/.oh-my-zsh on git:master x [21:47:42] C:0
-# $
 PROMPT="
 %{$terminfo[bold]$fg[blue]%}#%{$reset_color%} \
 %(#,%{$bg[yellow]%}%{$fg[black]%}%n%{$reset_color%},%{$fg[cyan]%}%n) \

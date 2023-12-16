@@ -1,4 +1,4 @@
-alias grep='grep -G'
+alias grep='grep --color=auto -G'
 alias fgrep='fgrep -G'
 alias egrep='egrep -G'
 
@@ -15,12 +15,8 @@ alias gp="git pull --rebase && git push"
 alias gch="git checkout"
 alias gr="git rebase"
 alias gd="git diff"
-alias gb="git branch"
 
 alias ta='tmux attach'
-
-alias em='emacs -nw --no-site-file'
-alias emacs="emacs --no-site-file"
 
 alias py3='ipython3'
 alias py='ipython'
