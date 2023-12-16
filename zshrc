@@ -9,27 +9,6 @@ setopt CORRECT_ALL
 setopt auto_cd
 
 
-<<<<<<< HEAD
-ZSH_THEME="ys-thenno"
-
-export LSCOLORS="Dxfxcxdxcxegedabagacad"
-
-plugins=(zsh-autosuggestions rg)
-
-source $ZSH/oh-my-zsh.sh
-source $ZDOTDIR/zsh.aliases
-
-if [ ! -d "$HOME/bin" ] ; then
-    mkdir -p $HOME/bin
-fi
-export PATH=$PATH:$HOME/bin
-
-if [ ! -d "$HOME/.pip" ] ; then
-    mkdir -p $HOME/.pip
-fi
-
-=======
->>>>>>> a3625a6 (First step)
 export LANG=en_US.UTF-8
 
 for lib_file ("$ZDOTDIR"/lib/*.zsh); do
