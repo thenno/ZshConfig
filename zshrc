@@ -16,6 +16,8 @@ for lib_file ("$ZDOTDIR"/lib/*.zsh); do
 done
 unset lib_file
 
+fpath+=$ZDOTDIR/completions
+
 ZSH_THEME="ys-thenno"
 autoload -U colors && colors
 setopt prompt_subst
