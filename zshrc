@@ -1,13 +1,11 @@
 ZDOTDIR=$HOME/.zsh.d
 
-HISTCONTROL=ignoreboth:erasedups
 HISTFILE=$ZDOTDIR/zsh_history
 
 export ZSH_CACHE_DIR=$ZDOTDIR/cache
 
 setopt CORRECT_ALL
 setopt auto_cd
-
 
 export LANG=en_US.UTF-8
 
