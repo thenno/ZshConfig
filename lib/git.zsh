@@ -1,4 +1,4 @@
-# based from ohmyzsh lib
+# based on ohmyzsh lib
 
 # The git prompt's git commands are read-only and should not interfere with
 # other processes. This environment variable is equivalent to running with `git

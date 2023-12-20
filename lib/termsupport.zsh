@@ -1,4 +1,4 @@
-# based from ohmyzsh lib
+# based on ohmyzsh lib
 
 # Set terminal window and tab/icon title
 #
