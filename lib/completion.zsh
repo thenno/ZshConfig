@@ -8,4 +8,3 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#) ([0-9a-z-
 zstyle ':completion:*' use-cache yes
 
 autoload -Uz compinit
-setopt menu_complete
