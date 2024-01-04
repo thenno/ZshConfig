@@ -31,7 +31,6 @@ PROMPT="
 %{$reset_color%}in \
 %{$terminfo[bold]$fg[yellow]%}%~%{$reset_color%}\
 ${git_info}\
-${venv_info}\
  \
 [%*]
 %{$terminfo[bold]$fg[red]%}$ %{$reset_color%}"
