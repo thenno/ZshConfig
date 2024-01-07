@@ -7,6 +7,10 @@ alias ll='ls -ohG'
 alias la='ls -oAhG'
 alias l='ls -CFG'
 
+alias dc=cd
+
+alias dug="du -g -d1 . | sort -n"
+
 alias gs="git status"
 alias gc="git commit -m"
 alias gl="git log --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --no-merges --perl-regexp"
