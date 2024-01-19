@@ -23,8 +23,7 @@ alias gb="git branch"
 
 alias ta='tmux attach'
 
-alias py3='ipython3'
-alias py='ipython'
+alias py='ipython3'
 
 alias script-clean=sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[mGK]//g"
 alias script=script -q
