@@ -11,3 +11,10 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 if which pyenv-virtualenv-init > /dev/null; then eval "$(pyenv virtualenv-init -)"; fi
+
+if [ -f '/Users/chiffa/.ncp/path.bash.inc' ]; then source '/Users/chiffa/.ncp/path.bash.inc'; fi
+# completions are to heavy
+# if [ -f '/Users/chiffa/.ncp/completion.zsh.inc' ]; then source '/Users/chiffa/.ncp/completion.zsh.inc'; fi
+
+The next line updates PATH for Yandex Cloud Private CLI.
+if [ -f '/Users/chiffa/.ycp/path.bash.inc' ]; then source '/Users/chiffa/.ycp/path.bash.inc'; fi

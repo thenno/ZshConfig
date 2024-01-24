@@ -44,3 +44,4 @@ fi
 unset CONFIGHOST
 
 compinit -d $ZSH_COMPDUMP
+
