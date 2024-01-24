@@ -16,5 +16,4 @@ if [ -f '/Users/chiffa/.ncp/path.bash.inc' ]; then source '/Users/chiffa/.ncp/pa
 # completions are to heavy
 # if [ -f '/Users/chiffa/.ncp/completion.zsh.inc' ]; then source '/Users/chiffa/.ncp/completion.zsh.inc'; fi
 
-The next line updates PATH for Yandex Cloud Private CLI.
 if [ -f '/Users/chiffa/.ycp/path.bash.inc' ]; then source '/Users/chiffa/.ycp/path.bash.inc'; fi
