@@ -5,3 +5,5 @@ alias py='ipython3'
 alias cdp='cd /Users/thenno/Program/work/arc/arcadia/yweb/yasap/pdb'
 
 alias cdd='cd /Users/chiffa/Code/datalens-backend-private'
+
+alias realpath='/opt/homebrew/opt/coreutils/libexec/gnubin/realpath'
