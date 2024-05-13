@@ -1,0 +1,5 @@
+alias ya="cd /home/chiffa/Code/ytsaurus/ya"
+
+alias pn='ipython notebook --pylab=inline'
+alias py='ipython3'
+alias cdy='cd /home/chiffa/Code/ytsaurus/'
