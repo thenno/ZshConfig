@@ -18,3 +18,5 @@ if [ -f '/Users/chiffa/.ncp/path.bash.inc' ]; then source '/Users/chiffa/.ncp/pa
 # if [ -f '/Users/chiffa/.ncp/completion.zsh.inc' ]; then source '/Users/chiffa/.ncp/completion.zsh.inc'; fi
 
 if [ -f '/Users/chiffa/.ycp/path.bash.inc' ]; then source '/Users/chiffa/.ycp/path.bash.inc'; fi
+
+export PATH=$PATH:/Users/chiffa/.npc/bin
