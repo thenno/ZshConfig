@@ -3,3 +3,5 @@
 .zsh_history
 zsh_history
 cache/
+.DS_Store
+zsh.private

@@ -40,6 +40,7 @@ CONFIGHOST="$HOME/.zsh.d/hosts/`hostname`"
 if [ -d $CONFIGHOST ] ; then
   [ -f $CONFIGHOST/zshrc ] && source $CONFIGHOST/zshrc
   [ -f $CONFIGHOST/zsh.aliases ] && source $CONFIGHOST/zsh.aliases
+  [ -f $CONFIGHOST/zsh.private ] && source $CONFIGHOST/zsh.private
 fi
 unset CONFIGHOST
 
